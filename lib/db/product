@@ -1,0 +1,29 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:uuid/uuid.dart';
+
+class ProductService {
+  Firestore _firestore = Firestore.instance;
+  String productRef = "products";
+
+  /// to upload images to  firestore DB.
+  void uploadProduct(
+      {String productName, String brand, String category, int quantity, List sizes, List Images, double price}) {
+    var id = Uuid();
+    String productId = id.v1();
+    _firestore
+        .collection(productRef)
+        .document(productId)
+        .setData({
+      'name': productName,
+      'id': productId,
+      'brand': brand,
+      'category': category,
+    });
+        }
+
+
+
+
+
+
+}

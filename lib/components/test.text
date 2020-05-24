@@ -1,0 +1,76 @@
+ @override
+  Widget build(BuildContext context) {
+    return Card(
+      child: ListTile(
+        //** leading section for Image */
+        leading: Image.asset(
+          cartPicture,
+          width: 80.0,
+          height: 80.0,
+        ),
+        //** title section  */
+        title: Text(cartName),
+        //** sub title section  */
+        subtitle: Column(
+          children: <Widget>[
+            //** cart size */
+            new Row(
+              children: <Widget>[
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Text("Size"),
+                ),
+                Padding(
+                  padding: const EdgeInsets.all(.0),
+                  child: Text(
+                    cartSize,
+                    style: TextStyle(color: Colors.red),
+                  ),
+                ),
+
+                ///** cart color  */
+
+                Padding(
+                  padding: const EdgeInsets.fromLTRB(20.0, 8.0, 8.0, 8.0),
+                  child: Text("Color"),
+                ),
+                Padding(
+                  padding: const EdgeInsets.all(4.0),
+                  child: Text(
+                    cartColor,
+                    style: TextStyle(color: Colors.red),
+                  ),
+                ),
+                //** cart Quantity */
+              ],
+            ),
+
+//** cart price */
+            Container(
+              alignment: Alignment.topLeft,
+              child: Text(
+                "\$$cartPrice",
+                style: TextStyle(
+                    color: Colors.red,
+                    fontSize: 16.0,
+                    fontWeight: FontWeight.bold),
+              ),
+            ),
+
+            /// contener for Quantity////////////////////////////////////////////////////////////////////////////////////////////
+            Container(
+              padding: EdgeInsets.fromLTRB(140, 0, 0, 0),
+              child: Column(
+                children: <Widget>[
+                  new IconButton(
+                      icon: Icon(Icons.arrow_drop_up), onPressed: () {}),
+                  new Text("${cartQuantity}"),
+                  new IconButton(
+                      icon: Icon(Icons.arrow_drop_down), onPressed: () {}),
+                ],
+              ),
+            )
+          ],
+        ),
+      ),
+    );
