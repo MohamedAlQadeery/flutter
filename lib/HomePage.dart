@@ -3,7 +3,6 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_app1/components/Products.dart';
 import 'package:flutter_app1/pages/Login.dart';
-
 import 'commons/common.dart';
 
 class HomePage extends StatefulWidget {

@@ -1,20 +1,13 @@
 import 'dart:async';
 import 'dart:io';
-
-import 'package:firebase_auth/firebase_auth.dart';
-import 'package:firebase_database/firebase_database.dart';
-import 'package:firebase_database/ui/firebase_animated_list.dart';
-import 'package:firebase_database/ui/firebase_sorted_list.dart';
 import 'package:firebase_storage/firebase_storage.dart';
 import 'package:flutter/material.dart';
-import 'package:convert/convert.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:image_picker/image_picker.dart';
 import '../db/Catagory.dart';
 import '../db/brand.dart';
 import 'package:flutter_typeahead/flutter_typeahead.dart';
-import 'package:flutter_typeahead/cupertino_flutter_typeahead.dart';
 import '../db/Product';
 
 class AddProduct extends StatefulWidget {

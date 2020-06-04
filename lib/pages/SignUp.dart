@@ -1,10 +1,8 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_app1/HomePage.dart';
-
 import 'package:flutter_app1/commons/common.dart';
 import 'package:flutter_app1/db/auth.dart';
-
 import '../db/users.dart';
 
 class SighnUp extends StatefulWidget {
