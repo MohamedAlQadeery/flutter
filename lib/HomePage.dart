@@ -15,7 +15,7 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     Widget image_carousel = new Container(
-      height: 200.0,
+      height: 201.0,
       child: new Carousel(
         boxFit: BoxFit.cover,
         images: [
